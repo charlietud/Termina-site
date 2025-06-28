@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 455 531" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-1508.33,-277.11)">
+        <g transform="matrix(1,0,0,1,1193,0)">
+            <g id="full-logo" transform="matrix(4.2511,0,0,4.2511,-1773.52,-1325.55)">
+                <g id="shield" transform="matrix(0.192926,0,0,0.192926,458.638,314.205)">
+                    <path d="M443.583,325.487C443.583,325.487 561.276,394.267 717.36,426C717.36,426 723.166,570 666.166,700C628.732,785.377 550.583,861 443.583,928.939C336.583,861 258.434,785.377 221,700C164,570 169.806,426 169.806,426C325.89,394.267 443.583,325.487 443.583,325.487Z" style="fill:url(#_Linear1);"/>
+                </g>
+                <g id="Diamond" transform="matrix(1.2183,0,0,1.2183,475.68,-292.531)">
+                    <path d="M83.819,651.08C81.653,634.107 68,618.458 68,618.458C78.593,605.852 83.819,590.689 83.819,590.689C83.819,590.689 89.044,605.852 99.637,618.458C99.637,618.458 85.984,634.107 83.819,651.08Z" style="fill:white;stroke:rgb(24,24,24);stroke-width:1.95px;"/>
+                </g>
+                <g id="Diamond1" serif:id="Diamond" transform="matrix(0.510636,0,0,0.510636,507.646,110.742)">
+                    <path d="M83.819,651.08C81.653,634.107 68,618.458 68,618.458C78.593,605.852 83.819,590.689 83.819,590.689C83.819,590.689 89.044,605.852 99.637,618.458C99.637,618.458 85.984,634.107 83.819,651.08Z" style="fill:white;stroke:rgb(24,24,24);stroke-width:3.5px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(508.114,353.394,-353.394,508.114,169.64,423.222)"><stop offset="0" style="stop-color:rgb(197,117,242);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(147,0,241);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
