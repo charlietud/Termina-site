@@ -40,7 +40,7 @@ nav {
 
 .header-logo {
     height: 50px;
-    margin-left: 20px;
+    /*margin-left: 10px;*/
     vertical-align: middle;
 }
 
@@ -53,6 +53,12 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
+}
+
+nav ul li:not(:first-child) {
+    border-left: 1px solid rgba(255,255,255,0.4);
+    padding-left: 18px;
+    margin-left: 18px;
 }
 
 nav ul li a {
@@ -68,7 +74,6 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    /*Gradient background: linear-gradient(to right, rgba(197, 117, 242, 0.8), rgba(147, 0, 241, 0.8)), */
     background: url('img/it-support.webp') no-repeat center center/cover;
     color: #fff;
     text-align: center;
@@ -82,10 +87,25 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/it-support.webp') no-repeat center center/cover;
+    filter: blur(10px);
+    z-index: 0;
+    mask-image: linear-gradient(to right, black 0%, transparent 50%);
+    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 50%);
+}
+
 .hero-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     z-index: 1;
+    text-align: left;
+    padding: 0 390px 0 0;
 }
 
 .main-logo {
@@ -269,7 +289,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #000000; /* Dark Slate Gray - keeping dark footer */
+    background-color: #181818; /* Dark Slate Gray - keeping dark footer */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
