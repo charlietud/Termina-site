@@ -39,7 +39,7 @@
             </div>
 
             <div class="card contact-section-item">
-                <form action="#" method="POST" class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <h3>Enviar un Mensaje</h3>
                     <div class="form-group">
                         <label for="name">Su Nombre:</label>
@@ -57,7 +57,8 @@
                         <label for="message">Su Mensaje:</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Enviar Mensaje</button>
+                    <button type="submit" class="btn" id="submit-btn">Enviar Mensaje</button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </section>
@@ -66,5 +67,16 @@
     <footer>
         <p>&copy; 2025 Termina Tech Solutions. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "l_mEVu33pLrSFdjLR", // Replace with your actual public key
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
