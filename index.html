@@ -24,13 +24,16 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-background"></div>
-            <div class="hero-content">
-<!--                <img src="icons/logo_svg.svg" alt="Termina Logo" class="main-logo">-->
-                <h2>Soluciones de TI para su negocio y hogar.</h2>
-                <p>Su tranquilidad y seguridad digital es nuestra prioridad.</p>
-                <a href="#services-overview" class="btn">Ver Nuestros Servicios</a>
+        <section id="hero" class="hero-split-section">
+            <div class="hero-split-content">
+                <div class="hero-content-wrapper">
+                    <h2>Soluciones de TI para su negocio y hogar.</h2>
+                    <p>Su tranquilidad y seguridad digital es nuestra prioridad.</p>
+                    <a href="#services-overview" class="btn">Ver Nuestros Servicios</a>
+                </div>
+            </div>
+            <div class="hero-split-image">
+                <!-- Image is set via CSS background -->
             </div>
         </section>
 
@@ -60,6 +63,19 @@
         <p>&copy; 2025 Termina Tech Solutions. Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
     <script src="script.js"></script>
 </body>
 </html> 
