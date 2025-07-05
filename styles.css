@@ -262,6 +262,7 @@ nav ul li a:hover {
     width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
+    resize: none; /* Prevents resizing of textarea */
 }
 
 .form-group input:focus,
@@ -271,9 +272,25 @@ nav ul li a:hover {
     box-shadow: 0 0 5px rgba(147, 0, 241, 0.5); /* Shadow with darker brand color */
 }
 
+.contact-info {
+    background-color: #f8f9fa;
+    border-left: 4px solid #9300F1;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #9300F1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
 .contact-info p {
-    margin: 8px 0;
+    margin: 12px 0;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .contact-info a {
@@ -305,6 +322,113 @@ footer {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* New Two-Column Contact Layout */
+.contact-layout {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.contact-info-column {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-form-column {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+}
+
+.contact-intro h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #9300F1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #34495E;
+}
+
+.contact-details {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    border-left: 4px solid #9300F1;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #9300F1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #34495E;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #9300F1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #C575F2;
+    text-decoration: underline;
+}
+
+.contact-form-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive Design for Contact Layout */
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contact-info-column,
+    .contact-form-column {
+        max-width: 100%;
+    }
+    
+    .contact-intro h3 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-form-card {
+        padding: 25px;
+    }
 }
 
 /* Added for overall consistency */
