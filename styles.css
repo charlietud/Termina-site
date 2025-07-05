@@ -35,10 +35,15 @@ body {
 }
 
 header {
-    background-color: var(--bg-dark);
+    background-color: transparent;
     color: var(--text-light);
     padding: 1rem 0;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -86,7 +91,7 @@ nav ul li:not(:first-child) {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -116,8 +121,10 @@ nav ul li a:hover {
 /* Hero Section - Split Layout - HEREEEEEEEEEEEEEE */
 .hero-split-section {
     display: flex;
-    min-height: 750px;
+    min-height: 100vh; /* Make hero section cover most of the screen */
     background-color: var(--bg-dark-blue);
+    margin-top: -80px; /* Pull hero section up to start at the very top */
+    padding-top: 80px; /* Add padding to push content below navbar */
 }
 
 .hero-split-content {
@@ -150,7 +157,7 @@ nav ul li a:hover {
 
 .hero-split-image {
     flex: 1;
-    background: url('https://images.unsplash.com/photo-1558655146-d09347e92766') no-repeat center center/cover;
+    background: url('./img/it-support.webp') no-repeat center center/cover;
 }
 
 /* Responsive Design for Hero Split Layout */
