@@ -1,18 +1,41 @@
+/* CSS Variables for Coherent Color Palette */
+:root {
+    /* Brand Colors */
+    --brand-primary: #9300F1;
+    --brand-secondary: #C575F2;
+    
+    /* Neutral Background System */
+    --bg-white: #FFFFFF;
+    --bg-light: #F8F9FA;
+    --bg-medium: #E9ECEF;
+    --bg-dark: #212529;
+    
+    /* Semantic Colors */
+    --success-bg: #D1E7DD;
+    --error-bg: #F8D7DA;
+    --warning-bg: #FFF3CD;
+    
+    /* Text Colors */
+    --text-dark: #212529;
+    --text-light: #FFFFFF;
+    --text-muted: #6C757D;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ECF0F1; /* Clouds - keeping a light background */
-    color: #34495E; /* Wet Asphalt - keeping dark text for readability */
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #181818; /* Dark Slate Gray - keeping dark header */
-    color: #fff;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     padding: 1rem 0;
     text-align: center;
 }
@@ -77,7 +100,7 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #C575F2;
+    background-color: var(--brand-secondary);
     transition: width 0.3s ease;
 }
 
@@ -86,14 +109,14 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #C575F2; /* Lighter brand color for hover */
+    color: var(--brand-secondary);
 }
 
 /* Hero Section - Split Layout */
 .hero-split-section {
     display: flex;
     min-height: 750px;
-    background-color: #fff; /* White background for the text side */
+    background-color: var(--bg-white);
 }
 
 .hero-split-content {
@@ -142,8 +165,8 @@ nav ul li a:hover {
 
 .btn {
     display: inline-block;
-    background-color: #9300F1; /* Darker brand color */
-    color: #fff;
+    background-color: var(--brand-primary);
+    color: var(--text-light);
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -153,7 +176,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #C575F2; /* Lighter brand color on hover */
+    background-color: var(--brand-secondary);
     transform: translateY(-2px);
 }
 
@@ -168,7 +191,7 @@ nav ul li a:hover {
 #services-overview h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #9300F1; /* Darker brand color for section heading */
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -180,7 +203,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--bg-white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 35px;
@@ -195,7 +218,7 @@ nav ul li a:hover {
 }
 
 .card h3 {
-    color: #9300F1; /* Darker brand color for card headings */
+    color: var(--brand-primary);
     margin-top: 0;
     margin-bottom: 18px;
     font-family: 'Montserrat', sans-serif;
@@ -210,8 +233,8 @@ nav ul li a:hover {
 
 .btn-small {
     display: inline-block;
-    background-color: #C575F2; /* Lighter brand color for small buttons */
-    color: #fff;
+    background-color: var(--brand-secondary);
+    color: var(--text-light);
     padding: 10px 18px;
     text-decoration: none;
     border-radius: 4px;
@@ -221,7 +244,7 @@ nav ul li a:hover {
 }
 
 .btn-small:hover {
-    background-color: #9300F1; /* Darker brand color on hover */
+    background-color: var(--brand-primary);
 }
 
 /* General Content Section Styling */
@@ -274,7 +297,7 @@ nav ul li a:hover {
 .form-group input,
 .form-group textarea {
     padding: 12px;
-    border: 1px solid #BDC3C7; /* Keeping a neutral border */
+    border: 1px solid var(--bg-medium);
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
@@ -285,13 +308,13 @@ nav ul li a:hover {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #9300F1; /* Darker brand color on focus */
-    box-shadow: 0 0 5px rgba(147, 0, 241, 0.5); /* Shadow with darker brand color */
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 5px rgba(147, 0, 241, 0.5);
 }
 
 .contact-info {
-    background-color: #f8f9fa;
-    border-left: 4px solid #9300F1;
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--brand-primary);
     padding: 25px;
     border-radius: 6px;
 }
@@ -299,7 +322,7 @@ nav ul li a:hover {
 .contact-info h3 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
 }
@@ -311,20 +334,20 @@ nav ul li a:hover {
 }
 
 .contact-info a {
-    color: #9300F1; /* Darker brand color for links */
+    color: var(--brand-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
-    color: #C575F2; /* Lighter brand color on hover */
+    color: var(--brand-secondary);
 }
 
 /* Footer */
 footer {
-    background-color: #181818; /* Dark Slate Gray - keeping dark footer */
-    color: #fff;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
     margin-top: auto;
@@ -335,7 +358,7 @@ footer {
 .contact-section-item {
     max-width: 700px;
     margin: 30px auto;
-    background-color: #fff;
+    background-color: var(--bg-white);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -367,21 +390,21 @@ footer {
 .contact-intro h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
 }
 
 .contact-intro p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-dark);
 }
 
 .contact-details {
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
     border-radius: 8px;
     padding: 30px;
-    border-left: 4px solid #9300F1;
+    border-left: 4px solid var(--brand-primary);
 }
 
 .contact-item {
@@ -395,7 +418,7 @@ footer {
 .contact-item h4 {
     font-size: 1.2rem;
     margin-bottom: 8px;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -403,23 +426,23 @@ footer {
 .contact-item p {
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #34495E;
+    color: var(--text-dark);
     margin: 0;
 }
 
 .contact-item a {
-    color: #9300F1;
+    color: var(--brand-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-    color: #C575F2;
+    color: var(--brand-secondary);
     text-decoration: underline;
 }
 
 .contact-form-card {
-    background-color: #fff;
+    background-color: var(--bg-white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 35px;
@@ -468,13 +491,13 @@ p {
 }
 
 .form-status.success {
-    background-color: #d4edda;
+    background-color: var(--success-bg);
     border: 1px solid #c3e6cb;
     color: #155724;
 }
 
 .form-status.error {
-    background-color: #f8d7da;
+    background-color: var(--error-bg);
     border: 1px solid #f5c6cb;
     color: #721c24;
 }
@@ -489,13 +512,13 @@ p {
 
 /* Disabled button state */
 .btn:disabled {
-    background-color: #BDC3C7;
+    background-color: var(--bg-medium);
     cursor: not-allowed;
     transform: none;
 }
 
 .btn:disabled:hover {
-    background-color: #BDC3C7;
+    background-color: var(--bg-medium);
     transform: none;
 }
 
@@ -503,7 +526,7 @@ p {
 .service-split-section {
     display: flex;
     min-height: 600px;
-    background-color: #fff;
+    background-color: var(--bg-white);
 }
 
 .service-split-reverse {
@@ -532,7 +555,7 @@ p {
     display: flex;
     align-items: center;
     padding: 4rem 3rem;
-    background-color: #fff;
+    background-color: var(--bg-white);
 }
 
 .service-content-wrapper {
@@ -543,7 +566,7 @@ p {
 .service-content-wrapper h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -551,7 +574,7 @@ p {
 .service-intro {
     font-size: 1.2rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-dark);
     margin-bottom: 2.5rem;
 }
 
@@ -566,16 +589,16 @@ p {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
     border-radius: 12px;
     transition: all 0.3s ease;
     border-left: 4px solid transparent;
 }
 
 .service-feature-item:hover {
-    background-color: #fff;
+    background-color: var(--bg-white);
     box-shadow: 0 4px 12px rgba(147, 0, 241, 0.1);
-    border-left-color: #9300F1;
+    border-left-color: var(--brand-primary);
     transform: translateX(5px);
 }
 
@@ -588,7 +611,7 @@ p {
 .feature-text h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -596,7 +619,7 @@ p {
 .feature-text p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #34495E;
+    color: var(--text-dark);
     margin: 0;
 }
 
@@ -640,7 +663,7 @@ p {
 .about-hero-section {
     display: flex;
     min-height: 600px;
-    background-color: #fff;
+    background-color: var(--bg-white);
     position: relative;
 }
 
@@ -666,8 +689,8 @@ p {
     display: flex;
     align-items: center;
     padding: 4rem 3rem;
-    background: linear-gradient(135deg, #9300F1 0%, #C575F2 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    color: var(--text-light);
 }
 
 .about-hero-text h1 {
@@ -676,7 +699,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #fff;
+    color: var(--text-light);
 }
 
 .hero-subtitle {
@@ -696,7 +719,7 @@ p {
 .about-split-section {
     display: flex;
     min-height: 600px;
-    background-color: #fff;
+    background-color: var(--bg-white);
 }
 
 .about-split-reverse {
@@ -725,7 +748,7 @@ p {
     display: flex;
     align-items: center;
     padding: 4rem 3rem;
-    background-color: #fff;
+    background-color: var(--bg-white);
 }
 
 .about-content-wrapper {
@@ -736,7 +759,7 @@ p {
 .about-content-wrapper h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -744,7 +767,7 @@ p {
 .about-intro {
     font-size: 1.2rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-dark);
     margin-bottom: 2.5rem;
 }
 
@@ -759,22 +782,22 @@ p {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
     border-radius: 12px;
     transition: all 0.3s ease;
     border-left: 4px solid transparent;
 }
 
 .about-feature-item:hover {
-    background-color: #fff;
+    background-color: var(--bg-white);
     box-shadow: 0 4px 12px rgba(147, 0, 241, 0.1);
-    border-left-color: #9300F1;
+    border-left-color: var(--brand-primary);
     transform: translateX(5px);
 }
 
 /* About CTA Section */
 .about-cta-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
     padding: 5rem 2rem;
     text-align: center;
 }
@@ -787,7 +810,7 @@ p {
 .about-cta-content h2 {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -795,7 +818,7 @@ p {
 .cta-description {
     font-size: 1.3rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-dark);
     margin-bottom: 3rem;
 }
 
@@ -812,7 +835,7 @@ p {
     flex: 1;
     min-width: 200px;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--bg-white);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -830,7 +853,7 @@ p {
 
 .cta-feature h4 {
     font-size: 1.2rem;
-    color: #9300F1;
+    color: var(--brand-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin: 0;
@@ -839,7 +862,7 @@ p {
 .cta-conclusion {
     font-size: 1.2rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-dark);
     margin-top: 3rem;
     font-weight: 500;
 }
