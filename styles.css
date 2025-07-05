@@ -46,6 +46,12 @@ header {
     z-index: 1000;
 }
 
+header.solid-header {
+    background-color: var(--bg-dark-blue);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0 ,0.1);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
