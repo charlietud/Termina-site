@@ -219,6 +219,11 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* Reduce bottom padding for page title sections */
+#page-title.content-section {
+    padding-bottom: 0.5rem;
+}
+
 .content-section h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
@@ -480,4 +485,146 @@ p {
 .btn:disabled:hover {
     background-color: #BDC3C7;
     transform: none;
+}
+
+/* Service Hero Sections - New Full-Width Layout */
+.service-hero-section {
+    padding: 5rem 20px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.service-hero-section-alt {
+    background-color: #f8f9fa;
+}
+
+.service-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: 0;
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.service-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.service-hero-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-intro {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.service-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.service-feature {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #9300F1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-hero-section-alt .service-feature {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.service-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-feature h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #9300F1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.service-feature p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495E;
+    margin: 0;
+}
+
+.service-conclusion {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design for Service Hero Sections */
+@media (max-width: 768px) {
+    .service-hero-section {
+        padding: 3rem 15px;
+    }
+    
+    .service-hero-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .service-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .service-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .service-feature {
+        padding: 1.5rem;
+    }
+    
+    .service-feature h4 {
+        font-size: 1.2rem;
+    }
+    
+    .service-feature p {
+        font-size: 1rem;
+    }
+    
+    .service-conclusion {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
 } 
