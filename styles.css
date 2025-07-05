@@ -1,15 +1,15 @@
 /* CSS Variables for Coherent Color Palette */
 :root {
     /* Brand Colors */
-    --brand-primary: #9300F1;
-    --brand-secondary: #C575F2;
+    --brand-primary: #9300F1; /* Electric Violet */
+    --brand-secondary: #C575F2; /* Heliotrope */
     
     /* Neutral Background System */
-    --bg-white: #FFFBFC;
+    --bg-white: #FFFBFC; /* Snow */
     --bg-light: #F8F9FA;
     --bg-medium: #E9ECEF;
-    --bg-dark: #051014;
-    --bg-dark-blue: #011936;
+    --bg-dark: #051014; /* Rich Black */
+    --bg-dark-blue: #011936; /* Oxford Blue */
     
     /* Semantic Colors */
     --success-bg: #D1E7DD;
