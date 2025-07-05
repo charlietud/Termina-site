@@ -5,10 +5,11 @@
     --brand-secondary: #C575F2;
     
     /* Neutral Background System */
-    --bg-white: #FFFFFF;
+    --bg-white: #FFFBFC;
     --bg-light: #F8F9FA;
     --bg-medium: #E9ECEF;
-    --bg-dark: #212529;
+    --bg-dark: #051014;
+    --bg-dark-blue: #011936;
     
     /* Semantic Colors */
     --success-bg: #D1E7DD;
@@ -17,7 +18,7 @@
     
     /* Text Colors */
     --text-dark: #212529;
-    --text-light: #FFFFFF;
+    --text-light: #FFFBFC;
     --text-muted: #6C757D;
 }
 
@@ -26,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     color: var(--text-dark);
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@ nav ul li {
 }
 
 nav ul li:not(:first-child) {
-    border-left: 1px solid rgba(255,255,255,0.4);
+    /*border-left: 1px solid rgba(255,255,255,0.4);*/
     padding-left: 18px;
     margin-left: 18px;
 }
@@ -112,11 +113,11 @@ nav ul li a:hover {
     color: var(--brand-secondary);
 }
 
-/* Hero Section - Split Layout */
+/* Hero Section - Split Layout - HEREEEEEEEEEEEEEE */
 .hero-split-section {
     display: flex;
     min-height: 750px;
-    background-color: var(--bg-white);
+    background-color: var(--bg-dark-blue);
 }
 
 .hero-split-content {
@@ -135,7 +136,7 @@ nav ul li a:hover {
 .hero-content-wrapper h2 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: #34495E;
+    color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -143,7 +144,7 @@ nav ul li a:hover {
 .hero-content-wrapper p {
     font-size: 1.3rem;
     line-height: 1.7;
-    color: #34495E;
+    color: var(--text-light);
     margin-bottom: 2.5rem;
 }
 
@@ -203,7 +204,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 35px;
@@ -442,7 +443,7 @@ footer {
 }
 
 .contact-form-card {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 35px;
