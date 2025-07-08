@@ -58,7 +58,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 3rem;
 }
 
 .logo {
@@ -163,7 +163,7 @@ nav ul li a:hover {
 
 .hero-split-image {
     flex: 1;
-    background: url('./img/it-support.webp') no-repeat center center/cover;
+    background: url('./img/support.png') no-repeat center center/cover;
 }
 
 /* Responsive Design for Hero Split Layout */
@@ -360,7 +360,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-dark-blue);
     color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
