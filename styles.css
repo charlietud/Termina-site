@@ -973,6 +973,11 @@ p {
     /* Show hamburger and adjust nav layout */
     .hamburger {
         display: flex;
+        z-index: 3000;
+    }
+
+    .hero-split-section {
+        z-index: 500;
     }
 
     nav {
