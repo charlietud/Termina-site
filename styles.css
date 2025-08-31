@@ -976,8 +976,16 @@ p {
         z-index: 3000;
     }
 
+    nav .hamburger {
+        display: flex !important; /* Override any conflicting rules */
+        visibility: visible !important; /* Ensure it’s not hidden */
+        opacity: 1 !important; /* Prevent fading */
+        z-index: 3000 !important; /* Above other elements */
+    }
+
     .hero-split-section {
         z-index: 500;
+        display: none;
     }
 
     nav {
