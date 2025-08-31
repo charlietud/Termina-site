@@ -944,4 +944,90 @@ p {
     .cta-feature {
         min-width: auto;
     }
-}  
+}
+
+/* Base styles for hamburger (hidden by default on large screens) */
+.hamburger-menu {
+    display: none; /* Hidden on large screens */
+}
+
+.hamburger-toggle {
+    display: none; /* Always hidden, used for state only */
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+/* Media query for smartphone sizes */
+@media (max-width: 768px) {
+    /* Show hamburger and adjust nav layout */
+    .hamburger-menu {
+        display: block; /* Visible on mobile */
+        order: 2; /* Position after logo in flex */
+    }
+
+    nav {
+        justify-content: space-between; /* Keep logo left, hamburger right */
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default on mobile */
+        position: absolute;
+        top: 100%; /* Below the header */
+        left: 0;
+        right: 0;
+        background-color: var(--bg-dark-blue);
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        margin: 1rem 0; /* Vertical spacing */
+        padding: 0;
+        border-left: none; /* Remove any borders for mobile */
+    }
+
+    nav ul li:not(:first-child) {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show menu when checkbox is checked */
+    .hamburger-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /* Animate hamburger to 'X' when menu is open */
+    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
