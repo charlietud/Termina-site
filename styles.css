@@ -946,17 +946,13 @@ p {
     }
 }
 
-/* Base styles for hamburger (hidden by default on large screens) */
-.hamburger-menu {
-    display: none; /* Hidden on large screens */
-}
-
+/* Hamburger MENU */
 .hamburger-toggle {
     display: none; /* Always hidden, used for state only */
 }
 
 .hamburger {
-    display: flex;
+    display: none; /* Hidden on large screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -974,13 +970,12 @@ p {
 /* Media query for smartphone sizes */
 @media (max-width: 768px) {
     /* Show hamburger and adjust nav layout */
-    .hamburger-menu {
-        display: block; /* Visible on mobile */
-        order: 2; /* Position after logo in flex */
+    .hamburger {
+        display: flex;
     }
 
     nav {
-        justify-content: space-between; /* Keep logo left, hamburger right */
+        justify-content: space-between; /* Logo left, hamburger right */
     }
 
     nav ul {
@@ -1014,20 +1009,20 @@ p {
     }
 
     /* Show menu when checkbox is checked */
-    .hamburger-toggle:checked ~ ul {
+    #hamburger-toggle:checked ~ ul {
         display: flex;
     }
 
     /* Animate hamburger to 'X' when menu is open */
-    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
+    #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
+    #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
+    #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 }
