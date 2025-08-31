@@ -965,6 +965,7 @@ p {
     height: 3px;
     background-color: var(--text-light);
     transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 /* Media query for smartphone sizes */
@@ -1021,7 +1022,7 @@ p {
 
     /* Animate hamburger to 'X' when menu is open */
     #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(7px, 7px);
     }
 
     #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
@@ -1029,6 +1030,6 @@ p {
     }
 
     #hamburger-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(7px, -8px);
     }
 }
