@@ -979,20 +979,25 @@ p {
     }
 
     nav ul {
-        display: none; /* Hide menu by default on mobile */
+        display: block; /* Change to block for better slide compatibility (flex still works, but block simplifies) */
         position: absolute;
         top: 100%; /* Below the header */
         left: 0;
         right: 0;
         background-color: var(--bg-dark-blue);
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
+        align-items: center; /* If keeping flex, but remove if switching to block */
         padding: 1rem 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        
+        /* Add for slide animation */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
     }
 
     nav ul li {
-        margin: 1rem 0; /* Vertical spacing */
+        margin: 1.8rem 0; /* Vertical spacing between MENU elements */
         padding: 0;
         border-left: none; /* Remove any borders for mobile */
     }
@@ -1010,7 +1015,8 @@ p {
 
     /* Show menu when checkbox is checked */
     #hamburger-toggle:checked ~ ul {
-        display: flex;
+        max-height: 500px; /* Set to a value larger than your menu's height; adjust if needed */
+        opacity: 1;
     }
 
     /* Animate hamburger to 'X' when menu is open */
