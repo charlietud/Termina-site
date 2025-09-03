@@ -735,6 +735,29 @@ p {
     opacity: 0.95;
 }
 
+.certification-logos {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cert-logo {
+    height: 120px;
+    width: auto;
+    max-width: 240px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.cert-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 /* About Split Sections */
 .about-split-section {
     display: flex;
@@ -909,6 +932,16 @@ p {
     
     .hero-subtitle {
         font-size: 1.3rem;
+    }
+    
+    .certification-logos {
+        gap: 2.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .cert-logo {
+        height: 90px;
+        max-width: 180px;
     }
     
     .about-split-section {
