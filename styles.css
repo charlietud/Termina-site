@@ -316,6 +316,7 @@ nav ul li a:hover {
     width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
     resize: none; /* Prevents resizing of textarea */
 }
 
@@ -1071,3 +1072,751 @@ p {
         transform: rotate(-45deg) translate(7px, -8px);
     }
 }
+
+/* New Styles for Business-Focused Services Page */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    color: var(--text-light);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--bg-white);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Core Services Section */
+.core-services-section {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+.core-services-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.core-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.core-service-card {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.core-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.core-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-description {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--brand-primary);
+    font-weight: bold;
+}
+
+/* Bundles Section */
+.bundles-section {
+    padding: 4rem 0;
+    background-color: var(--bg-white);
+}
+
+.bundles-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bundles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.bundle-card {
+    background: var(--bg-white);
+    border: 2px solid var(--bg-medium);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.bundle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.bundle-card.featured {
+    border-color: var(--brand-primary);
+    transform: scale(1.05);
+}
+
+.bundle-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.bundle-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--brand-primary);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.bundle-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+}
+
+.bundle-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.bundle-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-content {
+    padding: 1rem 2rem 2rem;
+}
+
+.bundle-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.bundle-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.bundle-features li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.bundle-cta {
+    text-align: center;
+}
+
+.btn-bundle {
+    display: inline-block;
+    background: var(--brand-primary);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-bundle:hover {
+    background: var(--brand-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(147, 0, 241, 0.3);
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+.why-choose-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.benefit-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.hero-section h1 {
+    color: var(--text-light);
+}
+
+/* Services page hero image sizing */
+.hero-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Services page hero gradient - matching about page style */
+.hero-split-content {
+    background: var(--bg-dark-blue);
+    color: var(--text-light);
+}
+
+/* Mobile Responsiveness for New Sections */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .core-services-section h2,
+    .bundles-section h2,
+    .why-choose-section h2 {
+        font-size: 2rem;
+    }
+    
+    .bundles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bundle-card.featured {
+        transform: none;
+    }
+    
+    .bundle-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Homepage Updates */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+    border-radius: 16px;
+}
+
+.cta-section h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .cta-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Health Check Lead Magnet Styles */
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.hero-offer {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.9;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background: var(--text-light);
+    color: var(--brand-primary);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+.btn-outline:hover {
+    background: var(--brand-primary);
+    color: var(--text-light);
+}
+
+/* Health Check Section */
+.health-check-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+}
+
+.health-check-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.health-check-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.health-check-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.health-check-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.health-check-benefits .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    padding: 0;
+}
+
+.health-check-benefits .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.health-check-benefits .benefit-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.health-check-benefits .benefit-text p {
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Health Check Form */
+.health-check-form {
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--bg-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-health-check {
+    width: 100%;
+    background: var(--brand-primary);
+    color: var(--text-light);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.btn-health-check:hover {
+    background: var(--brand-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(147, 0, 241, 0.3);
+}
+
+.form-disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0;
+}
+
+/* Bundle Secondary Button */
+.btn-bundle-secondary {
+    background: transparent;
+    border: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+    margin-top: 0.5rem;
+}
+
+.btn-bundle-secondary:hover {
+    background: var(--brand-primary);
+    color: var(--text-light);
+}
+
+/* Mobile Responsiveness for Health Check */
+@media (max-width: 768px) {
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .health-check-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .health-check-text h2 {
+        font-size: 2rem;
+    }
+    
+    .health-check-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .health-check-benefits .benefit-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .form-container h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.disclaimer-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.disclaimer-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.disclaimer-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.disclaimer-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.disclaimer-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.disclaimer-feature:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.disclaimer-feature .feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.disclaimer-feature .feature-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.disclaimer-cta {
+    margin-top: 2rem;
+}
+
+.btn-disclaimer {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    color: var(--text-light);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(147, 0, 241, 0.3);
+}
+
+.btn-disclaimer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(147, 0, 241, 0.4);
+    background: linear-gradient(135deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);
+}
+
+/* Mobile Responsiveness for Disclaimer */
+@media (max-width: 768px) {
+    .disclaimer-section {
+        padding: 3rem 0;
+    }
+    
+    .disclaimer-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .disclaimer-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .disclaimer-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .disclaimer-features {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .disclaimer-feature {
+        justify-content: center;
+        padding: 0.75rem 1rem;
+    }
+    
+    .btn-disclaimer {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+.health-check-text h4 {
+    margin-top: .5rem;
+}
+

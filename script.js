@@ -65,4 +65,70 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Health Check form handling
+    const healthCheckForm = document.getElementById('health-check-form');
+    if (healthCheckForm) {
+        healthCheckForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.btn-health-check');
+            const originalText = submitBtn.textContent;
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            
+            // Get form data
+            const formData = {
+                company_name: document.getElementById('company-name').value,
+                contact_name: document.getElementById('contact-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company_size: document.getElementById('company-size').value,
+                current_issues: document.getElementById('current-issues').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_axmo3vt', 'template_health_check', {
+                company_name: formData.company_name,
+                contact_name: formData.contact_name,
+                from_email: formData.email,
+                phone: formData.phone,
+                company_size: formData.company_size,
+                current_issues: formData.current_issues,
+                to_email: 'hola@terminatech.com'
+            })
+            .then(function(response) {
+                // Success - show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'form-success-message';
+                successMessage.innerHTML = `
+                    <div style="background: #d1e7dd; color: #0f5132; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+                        <strong>¡Solicitud enviada exitosamente!</strong><br>
+                        Nos pondremos en contacto con usted en las próximas 24 horas para programar su evaluación gratuita de TI.
+                    </div>
+                `;
+                healthCheckForm.appendChild(successMessage);
+                healthCheckForm.reset();
+            })
+            .catch(function(error) {
+                // Error - show error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'form-error-message';
+                errorMessage.innerHTML = `
+                    <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+                        <strong>Hubo un error al enviar la solicitud.</strong><br>
+                        Por favor, inténtelo de nuevo o contáctenos directamente por teléfono.
+                    </div>
+                `;
+                healthCheckForm.appendChild(errorMessage);
+            })
+            .finally(function() {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        });
+    }
 });
