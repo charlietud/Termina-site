@@ -1223,6 +1223,8 @@ p {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .bundle-card:hover {
@@ -1278,6 +1280,9 @@ p {
 
 .bundle-content {
     padding: 1rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .bundle-content h4 {
@@ -1300,6 +1305,7 @@ p {
 
 .bundle-cta {
     text-align: center;
+    margin-top: auto;
 }
 
 .btn-bundle {
