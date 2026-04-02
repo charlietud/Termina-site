@@ -16,7 +16,6 @@
         <nav>
             <div class="logo">
                 <a href="index.html"><img src="icons/term_logo.svg" alt="Termina Logo" class="header-logo"></a>
-<!--                <h1>Termina</h1>-->
             </div>
             <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
             <label for="hamburger-toggle" class="hamburger">
@@ -28,19 +27,14 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="about.html">Nosotros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--<section id="page-title" class="content-section" style="text-align: center;">
-            <h2>Contactar a Termina</h2>
-        </section>-->
-
         <section id="contact-content" class="content-section">
             <div class="contact-layout">
-                <!-- Left Column - Contact Information -->
                 <div class="contact-info-column">
                     <div class="contact-intro">
                         <h3>¡Nos encantaría saber de usted!</h3>
@@ -52,12 +46,12 @@
                             <h4>Teléfono y WhatsApp</h4>
                             <p><a href="tel:+52 33 2427 7587">+52 33 2427 7587</a></p>
                         </div>
-                        
+
                         <div class="contact-item">
                             <h4>Correo Electrónico</h4>
                             <p><a href="mailto:hola@terminatech.com">hola@terminatech.com</a></p>
                         </div>
-                        
+
                         <div class="contact-item">
                             <h4>Horario de Atención</h4>
                             <p>Lunes - Viernes, 9:00 AM - 6:00 PM<br>
@@ -66,7 +60,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column - Contact Form -->
                 <div class="contact-form-column">
                     <div class="health-check-form">
                         <div class="form-container">
@@ -96,19 +89,28 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Termina Tech Solutions. Todos los derechos reservados.</p><br>
-        <img src="icons/logo_svg.svg" alt="Termina Logo" class="header-logo">
+        <div class="footer-content">
+            <a href="index.html"><img src="icons/logo_svg.svg" alt="Termina Logo" class="footer-logo"></a>
+            <nav class="footer-nav">
+                <a href="index.html">Inicio</a>
+                <a href="services.html">Servicios</a>
+                <a href="about.html">Nosotros</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <p>&copy; 2025 Termina Tech Solutions. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    
+
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init({
-                publicKey: "l_mEVu33pLrSFdjLR", // Replace with your actual public key
+                publicKey: "l_mEVu33pLrSFdjLR",
             });
         })();
     </script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

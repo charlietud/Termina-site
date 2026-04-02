@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
             emailjs.send('service_axmo3vt', 'template_egu0b2t', {
                 from_name: formData.name,
                 from_email: formData.email,
@@ -102,12 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(response) {
                 // Success - show success message
                 const successMessage = document.createElement('div');
-                successMessage.className = 'form-success-message';
+                successMessage.className = 'form-feedback form-feedback-success';
                 successMessage.innerHTML = `
-                    <div style="background: #d1e7dd; color: #0f5132; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
-                        <strong>¡Solicitud enviada exitosamente!</strong><br>
-                        Nos pondremos en contacto con usted en las próximas 24 horas para programar su evaluación gratuita de TI.
-                    </div>
+                    <strong>¡Solicitud enviada exitosamente!</strong><br>
+                    Nos pondremos en contacto con usted en las próximas 24 horas para programar su evaluación gratuita de TI.
                 `;
                 healthCheckForm.appendChild(successMessage);
                 healthCheckForm.reset();
@@ -115,12 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(function(error) {
                 // Error - show error message
                 const errorMessage = document.createElement('div');
-                errorMessage.className = 'form-error-message';
+                errorMessage.className = 'form-feedback form-feedback-error';
                 errorMessage.innerHTML = `
-                    <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
-                        <strong>Hubo un error al enviar la solicitud.</strong><br>
-                        Por favor, inténtelo de nuevo o contáctenos directamente por teléfono.
-                    </div>
+                    <strong>Hubo un error al enviar la solicitud.</strong><br>
+                    Por favor, inténtelo de nuevo o contáctenos directamente por teléfono.
                 `;
                 healthCheckForm.appendChild(errorMessage);
             })
